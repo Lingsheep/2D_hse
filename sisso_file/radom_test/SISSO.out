@@ -1,0 +1,103 @@
+Version SISSO.3.0, June, 2019.
+================================================================================
+
+Reading data from train.dat ...
+Reading parameters from SISSO.in: 
+--------------------------------------------------------------------------------
+restarts ?     F
+descriptor dimension:        2
+property type:     1
+total number of properties:        1
+task_weighting:        1
+number of samples for each property:      416
+number of scalar features:       10
+times of applying the operator set for feature construction (rung of the feature space):        2
+max complexity (number of operators in a feature):       10
+number of dimension(unit)-type (for dimension analysis):        1
+dimension type for each primary feature: 
+  1.00
+  1.00
+  1.00
+  1.00
+  1.00
+  1.00
+  1.00
+  1.00
+  1.00
+  1.00
+lower bound of the max abs. data value for the selected features:     0.10000E-02
+upper bound of the max abs. data value for the selected features:     0.10000E+06
+Expected size of the SIS-selected (single) subspace :      400
+operator set for feature construction: (+)(-)(*)(/)(exp)(log)(^-1)(^2)(^3)(sqrt)(cbrt)(|-|) 
+method for sparsification:  L0        
+number of the top ranked models to output:      100
+fit intercept?      T
+metric for model selection: RMSE
+--------------------------------------------------------------------------------
+
+Feature Construction and Descriptor Identification (FCDI) starts ...
+
+iteration:   1
+--------------------------------------------------------------------------------
+FC starts ...
+Standard Deviation (SD) of property 001:    1.47848
+Total number of features in the space phi00:             10
+Total number of features in the space phi01:            340
+Total number of features in the space phi02:         208275
+Size of the SIS-selected subspace from phi02:        400
+Wall-clock time (second) for this FC:            3.28
+FC done!
+
+DI starts ...
+total number of SIS-selected features from all iterations:        400
+L0 starts ...
+
+Model/descriptor for generating residual:
+================================================================================
+  1D descriptor (model): 
+Total RMSE,MaxAE:   0.295035  1.336078
+@@@descriptor: 
+                      1:[((PBE/cell_Max_GSvolume_pa)*(cell_Max_GSvolume_pa+cell_mean_Electronegativity))]
+       coefficients_001:     0.1097176718E+01
+          Intercept_001:     0.5106906384E+00
+         RMSE,MaxAE_001:     0.2950345663E+00    0.1336077529E+01
+================================================================================
+Wall-clock time (second) for this DI:            0.22
+DI done!
+
+iteration:   2
+--------------------------------------------------------------------------------
+FC starts ...
+File containing the features to be rejected: feature_space/Uspace.name
+Total number of features in the space phi00:             10
+Total number of features in the space phi01:            340
+Total number of features in the space phi02:         208275
+Size of the SIS-selected subspace from phi02:        400
+Wall-clock time (second) for this FC:            0.73
+FC done!
+
+DI starts ...
+total number of SIS-selected features from all iterations:        800
+L0 starts ...
+
+Final model/descriptor to report
+================================================================================
+  2D descriptor (model): 
+Total RMSE,MaxAE:   0.267778  1.291074
+@@@descriptor: 
+                     51:[((PBE*cell_mean_MeltingT)/(cell_mean_MeltingT+cell_Max_GSvolume_pa))]
+                    437:[((cell_Max_Electronegativity+cell_mean_Electronegativity)/(cell_mean_MeltingT+cell_reduce_MeltingT))]
+       coefficients_001:     0.1229886334E+01    0.3085202218E+02
+          Intercept_001:     0.3091809863E+00
+         RMSE,MaxAE_001:     0.2677784639E+00    0.1291073706E+01
+================================================================================
+Wall-clock time (second) for this DI:            0.58
+DI done!
+
+FCDI done !
+
+--------------------------------------------------------------------------------
+Total wall-clock time (second):            6.84
+
+                                               Have a nice day !    
+
